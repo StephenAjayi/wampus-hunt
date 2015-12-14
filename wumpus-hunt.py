@@ -15,4 +15,8 @@ while True:
     print("You are in cave", player_location)
     if (player_location == wumpus_location - 1 or player_location == wumpus_location + 1):
         print("I smell a Wumpus!")
+    print("Which cave next?")
+    player_input =  raw_input(">")
+    if(not player_input.isdigit() or int(player_input) not in cave_numbers):
+        print(player_input, "is not a cave!")
     
